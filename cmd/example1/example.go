@@ -35,7 +35,6 @@ func All(url string) func([]string) error {
 		_, err = io.Copy(os.Stdout, res.Body)
 		return nil
 	}
-
 }
 
 func Json(url string) func([]string) error {
@@ -48,7 +47,6 @@ func Json(url string) func([]string) error {
 		encoder := json.NewEncoder(os.Stdout)
 		return encoder.Encode(feed)
 	}
-
 }
 
 var helpTemplate = `
